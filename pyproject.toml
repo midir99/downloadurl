@@ -1,0 +1,33 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "downloadurl"
+version = "1.0.1"
+description = "Download the content of some HTTP URL."
+readme = "README.md"
+authors = [{ name = "midir99", email = "midir99@proton.me" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Topic :: Internet :: WWW/HTTP",
+]
+keywords = ["download", "url", "python"]
+dependencies = [
+    "requests >= 2.28.1",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pip-tools", "pytest", "pylint"]
+
+[project.urls]
+Homepage = "https://github.com/midir99/downloadurl"
+
+[project.scripts]
+downloadurl = "downloadurl.__main__:main"
